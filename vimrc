@@ -2,12 +2,23 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" https://github.com/tpope/vim-pathogen
+" Start by having Pathogen load any external bundles
 call pathogen#infect()
+call pathogen#helptags()
+
+filetype plugin indent on
 
 syntax on
 set number
 set ruler
+
+" Whitespace stuff
+set nowrap
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set list listchars=tab:\ \ ,trail:·
 
 " Use solarized
 set background=dark
