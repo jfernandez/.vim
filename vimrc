@@ -14,11 +14,15 @@ set ruler
 
 " Whitespace stuff
 set nowrap
+set autoindent
+set smartindent
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-set list listchars=tab:\ \ ,trail:·
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
 
 " Use solarized
 set background=dark
