@@ -11,6 +11,7 @@ filetype plugin indent on
 syntax on
 set number
 set ruler
+set hlsearch
 
 " Whitespace stuff
 set nowrap
@@ -49,3 +50,10 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+
+" Ack options
+map <Leader>a :Ack!<space>
+" map <Leader>h :nohlsearch<CR>
