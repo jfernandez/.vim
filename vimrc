@@ -22,7 +22,10 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
-map <Leader>ev :tabedit ~/.vim/vimrc<CR>
+" Map <leader> to ,
+let mapleader = ","
+
+map <Leader>ee :tabedit ~/.vim/vimrc<CR>
 if has("autocmd")
   autocmd! BufWritePost vimrc source $MYVIMRC
 end
@@ -33,9 +36,6 @@ set backspace=indent,eol,start
 " Use solarized
 set background=dark
 colorscheme solarized
-
-" Map <leader> to ,
-let mapleader = ","
 
 " Hit jj to exit insert mode
 imap jj <Esc>
@@ -53,6 +53,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" Shortcut to rapidly toggle `set list`
+nmap <Leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
