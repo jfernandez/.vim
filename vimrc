@@ -7,13 +7,11 @@ call pathogen#infect()
 call pathogen#helptags()
 
 filetype plugin indent on
-
 syntax on
-set number
-set ruler
-set hlsearch
 
-" Whitespace stuff
+set number   " show the cursor position at all times
+set ruler    " show line numbers
+set hlsearch " highlight terms when searching
 set nowrap
 set autoindent
 set smartindent
@@ -21,6 +19,11 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+
+" Store temporary files in a central spot
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " Map <leader> to ,
 let mapleader = ","
