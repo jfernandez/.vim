@@ -22,6 +22,11 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
+map <Leader>ev :tabedit ~/.vim/vimrc<CR>
+if has("autocmd")
+  autocmd! BufWritePost vimrc source $MYVIMRC
+end
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -34,9 +39,6 @@ let mapleader = ","
 
 " Hit jj to exit insert mode
 imap jj <Esc>
-
-" Reload all config files
-nnoremap <leader>rl :so ~/.vimrc<cr>:so ~/.gvimrc<cr>
 
 " Minimum number of lines below/above the cursor when scrolling
 set scrolloff=3
@@ -56,4 +58,4 @@ set listchars=tab:▸\ ,eol:¬
 
 " Ack options
 map <Leader>a :Ack!<space>
-" map <Leader>h :nohlsearch<CR>
+map <Leader>h :nohlsearch<CR>
