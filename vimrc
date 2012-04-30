@@ -72,3 +72,7 @@ nnoremap <F4> :NERDTreeToggle<CR>
 autocmd vimenter * if !argc() | NERDTree | endif
 " Close Vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" CoffeeScript
+" To recompile a file when it's written
+autocmd BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
