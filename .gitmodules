@@ -36,3 +36,6 @@
 	path = bundle/vroom
 	url = git://github.com/skalnik/vim-vroom.git
   ignore = untracked
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
