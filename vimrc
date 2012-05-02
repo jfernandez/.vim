@@ -29,9 +29,20 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 let mapleader = ","
 
 map <Leader>ee :tabedit ~/.vim/vimrc<CR>
-if has("autocmd")
+
+augroup vimrcEx
+  " Clear all autocmds in the group
+  autocmd!
+  
+  " Source my vimrc file on save
   autocmd! BufWritePost vimrc source $MYVIMRC
-end
+
+  " Jump to last cursor position unless it's invalid or in an event handler
+  autocmd BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
+    \ endif
+augroup END
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
