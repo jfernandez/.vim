@@ -67,6 +67,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" Switch between the last two files
+nnoremap <leader><leader> <c-^>
+
 " Shortcut to rapidly toggle `set list`
 nmap <Leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
