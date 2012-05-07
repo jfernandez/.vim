@@ -11,9 +11,9 @@ syntax on
 
 set number     " show the cursor position at all times
 set ruler      " show line numbers
-set hlsearch   " highlight terms when searching
+set nohlsearch " don't highlight terms when searching
 set ignorecase " make searching case insensitive
-set smartcase  " unless there is a uppcase character
+set smartcase  " unless there is a uppercase character
 set nowrap
 set autoindent
 set smartindent
