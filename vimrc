@@ -9,11 +9,8 @@ call pathogen#helptags()
 filetype plugin indent on
 syntax on
 
-set number     " show the cursor position at all times
-set ruler      " show line numbers
-set nohlsearch " don't highlight terms when searching
-set ignorecase " make searching case insensitive
-set smartcase  " unless there is a uppercase character
+set number
+set ruler
 set nowrap
 set autoindent
 set smartindent
@@ -21,6 +18,12 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+
+" Search
+set incsearch  " search as you type
+set nohlsearch " don't highlight terms when searching
+set ignorecase " make searching case insensitive
+set smartcase  " unless there is a uppercase character
 
 " Store temporary files in a central spot
 set backup
