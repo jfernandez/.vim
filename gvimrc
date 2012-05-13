@@ -1,5 +1,6 @@
 " Fullscreen takes up entire screen
 set fuoptions=maxhorz,maxvert
+set gfn=Consolas:h13
 
 " Don't beep
 set visualbell
