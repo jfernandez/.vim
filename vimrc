@@ -88,7 +88,7 @@ map <Leader>h :nohlsearch<CR>
 " convenient to have a hotkey for the NERDtree
 nnoremap <F4> :NERDTreeToggle<CR>
 " open up a NERDtree at startup if there are no files provided
-autocmd vimenter * if !argc() | NERDTree | endif
+" autocmd vimenter * if !argc() | NERDTree | endif
 " Close Vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
